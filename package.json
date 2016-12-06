@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stylelint config",
   "author": "Dustin Horton <d@dustinhorton.com> (http://dustinhorton.com)",
   "license": "MIT",
