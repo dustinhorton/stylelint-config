@@ -4,6 +4,10 @@
   "description": "Stylelint config",
   "author": "Dustin Horton <d@dustinhorton.com> (http://dustinhorton.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinhorton/stylelint-config"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/eslint/bin/eslint.js '**/*.js' --quiet"
