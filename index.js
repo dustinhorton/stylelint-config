@@ -1,4 +1,4 @@
-const patternRegEx = /[a-z][a-z0-9\-]+/;
+const patternRegEx = /[a-z]{1}([a-z0-9\-]+)?/;
 
 module.exports = {
   'extends': 'stylelint-config-standard',
