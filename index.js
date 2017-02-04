@@ -2,7 +2,10 @@ const patternRegEx = /[a-z]{1}([a-z0-9\-]+)?/;
 
 module.exports = {
   'extends': 'stylelint-config-standard',
-  'plugins': ['stylelint-scss'],
+  'plugins': [
+    'stylelint-order',
+    'stylelint-scss',
+  ],
   'rules': {
     // disable stylelint-config-standard
     'no-missing-end-of-source-newline': null,
@@ -26,45 +29,8 @@ module.exports = {
     'selector-list-comma-newline-after': 'always-multi-line',
     'selector-pseudo-class-no-unknown': true,
 
-    // stylelint-scss
-    'scss/at-else-closing-brace-space-after': 'always-intermediate',
-    'scss/at-else-empty-line-before': 'never',
-    'scss/at-function-pattern': patternRegEx,
-    'scss/at-if-closing-brace-space-after': 'always-intermediate',
-    'scss/at-import-no-partial-leading-underscore': true,
-    'scss/at-import-partial-extension-blacklist': ['scss'],
-    'scss/at-mixin-no-argumentless-call-parentheses': true,
-    'scss/at-mixin-pattern': patternRegEx,
-    'scss/declaration-nested-properties': 'never',
-    'scss/dollar-variable-colon-newline-after': 'always-multi-line',
-    'scss/dollar-variable-colon-space-before': 'never',
-    'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': patternRegEx,
-    'scss/operator-no-newline-after': true,
-    'scss/operator-no-newline-before': true,
-    'scss/operator-no-unspaced': true,
-    'scss/percent-placeholder-pattern': patternRegEx,
-    'scss/selector-no-redundant-nesting-selector': true,
-
-    'at-rule-name-newline-after': 'always-multi-line',
-    'at-rule-no-unknown': [true, {
-      'ignoreAtRules': [
-        'content',
-        'each',
-        'else',
-        'extend',
-        'for',
-        'function',
-        'if',
-        'include',
-        'mixin',
-        'return',
-      ],
-    }],
-    'at-rule-no-vendor-prefix': true,
-    'color-named': 'never',
-    'color-no-hex': true,
-    'declaration-block-properties-order': [
+    // stylelint-order
+    'order/declaration-block-properties-specified-order': [
       'content',
       'quotes',
       'counter-increment',
@@ -232,6 +198,45 @@ module.exports = {
       'transition-delay',
       'transition-duration',
     ],
+
+    // stylelint-scss
+    'scss/at-else-closing-brace-space-after': 'always-intermediate',
+    'scss/at-else-empty-line-before': 'never',
+    'scss/at-function-pattern': patternRegEx,
+    'scss/at-if-closing-brace-space-after': 'always-intermediate',
+    'scss/at-import-no-partial-leading-underscore': true,
+    'scss/at-import-partial-extension-blacklist': ['scss'],
+    'scss/at-mixin-no-argumentless-call-parentheses': true,
+    'scss/at-mixin-pattern': patternRegEx,
+    'scss/declaration-nested-properties': 'never',
+    'scss/dollar-variable-colon-newline-after': 'always-multi-line',
+    'scss/dollar-variable-colon-space-before': 'never',
+    'scss/dollar-variable-no-missing-interpolation': true,
+    'scss/dollar-variable-pattern': patternRegEx,
+    'scss/operator-no-newline-after': true,
+    'scss/operator-no-newline-before': true,
+    'scss/operator-no-unspaced': true,
+    'scss/percent-placeholder-pattern': patternRegEx,
+    'scss/selector-no-redundant-nesting-selector': true,
+
+    'at-rule-name-newline-after': 'always-multi-line',
+    'at-rule-no-unknown': [true, {
+      'ignoreAtRules': [
+        'content',
+        'each',
+        'else',
+        'extend',
+        'for',
+        'function',
+        'if',
+        'include',
+        'mixin',
+        'return',
+      ],
+    }],
+    'at-rule-no-vendor-prefix': true,
+    'color-named': 'never',
+    'color-no-hex': true,
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     'declaration-no-important': true,
     'declaration-property-unit-blacklist': {
