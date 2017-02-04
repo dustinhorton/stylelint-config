@@ -24,9 +24,7 @@ module.exports = {
     'declaration-empty-line-before': 'never',
     'max-empty-lines': 4,
     'selector-list-comma-newline-after': 'always-multi-line',
-    'selector-pseudo-class-no-unknown': [true, {
-      'ignorePseudoClasses': ['window-inactive'],
-    }],
+    'selector-pseudo-class-no-unknown': true,
 
     // stylelint-scss
     'scss/at-else-closing-brace-space-after': 'always-intermediate',
@@ -248,9 +246,6 @@ module.exports = {
       'border-bottom-width': ['px'],
       'border-left-width': ['px'],
     },
-    'declaration-property-value-blacklist': {
-      'flex': ['1'],
-    },
     'font-family-name-quotes': 'always-where-required',
     'font-weight-notation': 'named-where-possible',
     'function-url-no-scheme-relative': true,
@@ -260,11 +255,9 @@ module.exports = {
     'media-feature-no-missing-punctuation': true,
     'no-descending-specificity': true,
     'no-duplicate-selectors': true,
-    'no-indistinguishable-colors': true,
     'no-unknown-animations': true,
     'number-max-precision': 4,
     'property-no-vendor-prefix': true,
-    'root-no-standard-properties': true,
     'selector-attribute-quotes': 'always',
     'selector-class-pattern': [patternRegEx, {
       resolveNestedSelectors: true,
@@ -275,7 +268,6 @@ module.exports = {
     'selector-no-id': true,
     'selector-no-vendor-prefix': true,
     'selector-pseudo-element-case': 'lower',
-    'selector-root-no-composition': true,
     'unit-blacklist': [
       'ch',
       'cm',
