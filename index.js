@@ -29,12 +29,15 @@ module.exports = {
     }],
 
     // stylelint-scss
+    'scss/at-else-closing-brace-space-after': 'always-intermediate',
+    'scss/at-else-empty-line-before': 'never',
     'scss/at-function-pattern': patternRegEx,
+    'scss/at-if-closing-brace-space-after': 'always-intermediate',
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-import-partial-extension-blacklist': ['scss'],
     'scss/at-mixin-no-argumentless-call-parentheses': true,
     'scss/at-mixin-pattern': patternRegEx,
-    //'scss/declaration-nested-properties': 'never',  // wait for 1.3.5
+    'scss/declaration-nested-properties': 'never',
     'scss/dollar-variable-colon-newline-after': 'always-multi-line',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
@@ -266,7 +269,6 @@ module.exports = {
     'selector-class-pattern': [patternRegEx, {
       resolveNestedSelectors: true,
     }],
-    'selector-list-comma-newline-after': 'always',
     'selector-list-comma-newline-before': 'never-multi-line',
     'selector-list-comma-space-after': 'always-single-line',
     'selector-no-empty': true,
