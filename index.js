@@ -64,7 +64,6 @@ module.exports = {
     'at-rule-no-vendor-prefix': true,
     'color-named': 'never',
     'color-no-hex': true,
-    'declaration-block-no-ignored-properties': true,
     'declaration-block-properties-order': [
       'content',
       'quotes',
@@ -252,7 +251,6 @@ module.exports = {
     'function-url-quotes': ['always', {
       'except': ['empty'],
     }],
-    'media-feature-no-missing-punctuation': true,
     'no-descending-specificity': true,
     'no-duplicate-selectors': true,
     'no-unknown-animations': true,
@@ -264,7 +262,6 @@ module.exports = {
     }],
     'selector-list-comma-newline-before': 'never-multi-line',
     'selector-list-comma-space-after': 'always-single-line',
-    'selector-no-empty': true,
     'selector-no-id': true,
     'selector-no-vendor-prefix': true,
     'selector-pseudo-element-case': 'lower',
