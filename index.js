@@ -197,6 +197,7 @@ module.exports = {
       'transition-property',
       'transition-delay',
       'transition-duration',
+      'transition-timing-function',
     ],
 
     // stylelint-scss
