@@ -37,6 +37,12 @@ module.exports = {
         'return',
       ],
     }],
+    'block-closing-brace-newline-after': ['always', {
+      ignoreAtRules: [
+        'else',
+        'if',
+      ]
+    }],
     'block-opening-brace-space-before': 'always-multi-line',
     'custom-property-empty-line-before': 'never',
     'declaration-empty-line-before': 'never',
