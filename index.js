@@ -7,30 +7,47 @@ module.exports = {
     'stylelint-scss',
   ],
   'rules': {
-    // disable stylelint-config-standard
-    'no-missing-end-of-source-newline': null,
-
     // override stylelint-config-standard
     'at-rule-empty-line-before': ['always', {
       'except': [
-        'blockless-group',
+        'blockless-after-blockless',
         'first-nested',
+      ],
+      'ignore': [
+        'after-comment',
       ],
       'ignoreAtRules': [
         'else',
-        'if',
+        'elseif',
+        'include',
       ],
     }],
     'at-rule-name-space-after': 'always',
+    'at-rule-no-unknown': [true, {
+      'ignoreAtRules': [
+        'content',
+        'each',
+        'else',
+        'extend',
+        'for',
+        'function',
+        'if',
+        'include',
+        'mixin',
+        'return',
+      ],
+    }],
     'block-opening-brace-space-before': 'always-multi-line',
     'custom-property-empty-line-before': 'never',
     'declaration-empty-line-before': 'never',
     'max-empty-lines': 4,
+    'no-missing-end-of-source-newline': null,
+    'selector-pseudo-class-no-unknown': [true, {
+      ignorePseudoClasses: ['global'],
+    }],
     'selector-list-comma-newline-after': 'always-multi-line',
-    'selector-pseudo-class-no-unknown': true,
 
-    // stylelint-order
-    'order/declaration-block-properties-specified-order': [
+    'order/properties-order': [
       'content',
       'quotes',
       'counter-increment',
@@ -200,14 +217,15 @@ module.exports = {
       'transition-timing-function',
     ],
 
-    // stylelint-scss
+    'scss/at-else-if-parentheses-space-before': 'always',
     'scss/at-else-closing-brace-space-after': 'always-intermediate',
     'scss/at-else-empty-line-before': 'never',
+    'scss/at-function-parentheses-space-before': 'never',
     'scss/at-function-pattern': patternRegEx,
     'scss/at-if-closing-brace-space-after': 'always-intermediate',
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-import-partial-extension-blacklist': ['scss'],
-    'scss/at-mixin-no-argumentless-call-parentheses': true,
+    'scss/at-mixin-parentheses-space-before': 'never',
     'scss/at-mixin-pattern': patternRegEx,
     'scss/declaration-nested-properties': 'never',
     'scss/dollar-variable-colon-newline-after': 'always-multi-line',
@@ -221,25 +239,10 @@ module.exports = {
     'scss/selector-no-redundant-nesting-selector': true,
 
     'at-rule-name-newline-after': 'always-multi-line',
-    'at-rule-no-unknown': [true, {
-      'ignoreAtRules': [
-        'content',
-        'each',
-        'else',
-        'extend',
-        'for',
-        'function',
-        'if',
-        'include',
-        'mixin',
-        'return',
-      ],
-    }],
     'at-rule-no-vendor-prefix': true,
     'color-named': 'never',
     'color-no-hex': true,
     'declaration-block-semicolon-newline-before': 'never-multi-line',
-    'declaration-no-important': true,
     'declaration-property-unit-blacklist': {
       'font-size': ['em'],
     },
@@ -268,7 +271,6 @@ module.exports = {
     }],
     'selector-list-comma-newline-before': 'never-multi-line',
     'selector-list-comma-space-after': 'always-single-line',
-    'selector-no-id': true,
     'selector-no-vendor-prefix': true,
     'selector-pseudo-element-case': 'lower',
     'unit-blacklist': [
